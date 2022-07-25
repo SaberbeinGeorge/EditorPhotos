@@ -20,12 +20,12 @@ window.onload = function(){
                 console.log('ejecuto else')
             }
 
-            var files = event.target.files; //FileList object
+            let files = event.target.files; //FileList object
             /* var output = document.getElementById("result"); */
             console.log(arrayInfoHour)
             for(var i = 0; i< files.length; i++)
             {
-                var file = files[i];
+                let file = files[i];
                 console.log(file);
                 
                 let minutes;
@@ -53,17 +53,18 @@ window.onload = function(){
                 
                 picReader.addEventListener("load",function(event){
                     
-                    var picFile = event.target;
+                    setTimeout(() => {
+                        let picFile = event.target;
                     console.log('evento' + picFile)
                     const selection = document.querySelector('.containerImage');
-                    var div = document.createElement("div");
-                    var img = document.createElement('img');
+                    let div = document.createElement("div");
+                    let img = document.createElement('img');
                     const parrafo = document.createElement('p');
                     const parrafo2 = document.createElement('p');
                     
-                    let text1 = `PU_A2220 SITE ITAPALLUNI 
-                    -16.19623, -69.5890, 4109.8m`;
-                    let text3 = `2 jun. 2022 ${hourResult}:${minutes}:${second}`
+                    let text1 = `PU_A_2935 SITE VILLA HERMOSA 
+                    -14.48748, -70.23138, 4445.7m`;
+                    let text3 = `6 jun. 2022 ${hourResult}:${minutes}:${second}`
 
                     const text = document.createTextNode(text1);
                     const text2 = document.createTextNode(text3);
@@ -81,6 +82,8 @@ window.onload = function(){
                     div.appendChild(parrafo2);
                     div.classList.add('containerImage2')
                     selection.appendChild(div);
+                    }, 2000);
+                    
                     /* output.insertBefore(div,null);             */
                 });
                 

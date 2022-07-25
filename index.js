@@ -10,7 +10,7 @@ function aleatorioMinutes(min, max, count)
 
     arrayMinutes.push(resultado);
 
-    if (contador === 4) {
+    if (contador === 7) {
         return
     }
     
@@ -28,7 +28,7 @@ function aleatorioMinutes(min, max, count)
     let resultado;
     resultado = Math.floor(Math.random()*(max-min+1))+min;
     arraySecond.push(resultado);
-    if (contador === 4) {
+    if (contador === 7) {
         return
     }
     if (arrayMinutes[contador - 1] === arrayMinutes[contador]) {
