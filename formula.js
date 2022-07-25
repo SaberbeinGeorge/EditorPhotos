@@ -12,7 +12,7 @@ window.onload = function(){
             let hour = Number(arrayInfoHour[0]);
             let media = Number(arrayMinutes[0]);
 
-            if (hour > 10 ) {
+            if (hour < 10 ) {
                 hourResult = `0${hour}`;
                 console.log('ejecuto if')
             } else {
