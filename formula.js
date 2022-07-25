@@ -33,9 +33,10 @@ window.onload = function(){
                 
                 if (media < 1) {
                     minutes = `0${arrayMinutes[i]}`
-                    console.log(minutes)
+                    console.log('ejecuto if minutes')
                 } else {
                     minutes = `3${arrayMinutes[i]}`
+                    console.log('ejecuto else minutes')
                 }
                 if (arraySecond[i]< 10) {
                     second = `0${arraySecond[i]}`
