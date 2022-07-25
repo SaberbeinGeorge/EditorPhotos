@@ -36,7 +36,7 @@ window.onload = function(){
                     console.log('ejecuto if minutes')
                 } else {
                     minutes = `3${arrayMinutes[i]}`
-                    console.log('ejecuto else minutes')
+                    console.log('ejecuto else minutes evaluar')
                 }
                 if (arraySecond[i]< 10) {
                     second = `0${arraySecond[i]}`
