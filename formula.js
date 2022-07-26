@@ -12,7 +12,8 @@ window.onload = function(){
         filesInput.addEventListener("change", function(event){
             let hourResult;
             let hour = Number(arrayInfoHour[0]);
-            let media = Number(arrayMinutes[0]);
+            let media = Number(arrayInfoMinutes[0]);
+            console.log('ingreso media: ' + media);
 
             if (hour < 10 ) {
                 hourResult = `0${hour}`;

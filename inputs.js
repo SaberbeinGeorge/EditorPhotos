@@ -2,8 +2,8 @@ let arrayInfoHour = [];
 let arrayInfoMinutes = [];
 let array1 = [];
 let array2 = [];
-const arrayMinutes = [];
-const arraySecond = [];
+let arrayMinutes = [];
+let arraySecond = [];
 
 
 for (let i = 0; i <= 5; i++) {
@@ -21,7 +21,7 @@ function primerDato() {
     let inputHour = document.getElementById('hour').value;
     let inputBaterias = document.getElementById('numberBat').value;
     arrayInfoHour.push(inputHour);
-    arrayInfoMinutes.push(arrayInfoMinutes);
+    arrayInfoMinutes.push(inputBaterias);
     console.log(inputHour, inputBaterias);
 };
 
