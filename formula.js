@@ -1,4 +1,6 @@
-import {arrayMinutes, arraySecond,} from './index.js';
+/* import {arrayMinutes, arraySecond,} from './index.js'; */
+
+
 
 window.onload = function(){
         
@@ -14,37 +16,41 @@ window.onload = function(){
 
             if (hour < 10 ) {
                 hourResult = `0${hour}`;
-                console.log('ejecuto if')
+                console.log('ejecuto if ' + hour)
             } else {
                 hourResult = hour;
-                console.log('ejecuto else')
+                console.log('ejecuto else' + hour)
             }
 
             let files = event.target.files; //FileList object
             /* var output = document.getElementById("result"); */
-            console.log(arrayInfoHour)
+            
             for(var i = 0; i< files.length; i++)
             {
                 let file = files[i];
-                console.log(file);
                 
                 let minutes;
                 let second ;
-                
+                let cord1 = array1[i];
+                let cord2 = array2[i];
+                let escribeMinutes = arrayMinutes[i];
+                let escribeSeconds = arraySecond[i]
                 if (media < 1) {
-                    minutes = `0${arrayMinutes[i]}`
-                    console.log('ejecuto if minutes')
+                    minutes = `0${escribeMinutes}`
+                    console.log('minutos en if '+ minutes)
                 } else {
-                    minutes = `3${arrayMinutes[i]}`
-                    console.log('ejecuto else minutes evaluar')
+                    minutes = `3${escribeMinutes}`
+                    console.log('minutos en if ' + minutes)
                 }
-                if (arraySecond[i]< 10) {
-                    second = `0${arraySecond[i]}`
+                if (escribeSeconds < 10) {
+                    second = `0${escribeSeconds}`
+                    console.log(' second if ' + second)
                 } else {
-                    second = arraySecond[i];
+                    second = escribeSeconds;
+                    console.log(' second else ' + second)
                 }
 
-                console.log(arrayMinutes)
+                
                 //Only pics
                 if(!file.type.match('image'))
                   continue;
@@ -53,18 +59,17 @@ window.onload = function(){
                 
                 picReader.addEventListener("load",function(event){
                     
-                    setTimeout(() => {
-                        let picFile = event.target;
-                    console.log('evento' + picFile)
+                    /* setTimeout(() => { */
+                    let picFile = event.target;
                     const selection = document.querySelector('.containerImage');
                     let div = document.createElement("div");
                     let img = document.createElement('img');
                     const parrafo = document.createElement('p');
                     const parrafo2 = document.createElement('p');
                     
-                    let text1 = `PU_A_2935 SITE VILLA HERMOSA 
-                    -14.48748, -70.23138, 4445.7m`;
-                    let text3 = `6 jun. 2022 ${hourResult}:${minutes}:${second}`
+                    let text1 = `PU_A_2157 SITE HUARYJULLO 
+                    -16.263${cord1}, -70.02${cord2}, 4219.8m`;
+                    let text3 = `29 may. 2022 ${hourResult}:${minutes}:${second}`
 
                     const text = document.createTextNode(text1);
                     const text2 = document.createTextNode(text3);
@@ -82,7 +87,7 @@ window.onload = function(){
                     div.appendChild(parrafo2);
                     div.classList.add('containerImage2')
                     selection.appendChild(div);
-                    }, 2000);
+                    /* }, 2000); */
                     
                     /* output.insertBefore(div,null);             */
                 });

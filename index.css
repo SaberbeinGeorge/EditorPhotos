@@ -6,7 +6,7 @@ body {
 }
 .imagenes {
     width: 1080px;
-    height: 810px;
+    height: 853px;
 }
 .containerImage2 {
     display: flex;
@@ -39,7 +39,7 @@ body {
     font-size: 3rem;
     color: white;
     top: 637px;
-    left: calc(73.5%);
+    left: calc(71%);
 }
 header {
     width: 100%;
